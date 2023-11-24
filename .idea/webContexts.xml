@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/application/save.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/application" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/application/update.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/application" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/genre/get-all.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/genre" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/user/main-for-admin.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/user" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/user/main-for-user.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/user" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/user/save.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/user" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/user/update.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/user" />
+      </map>
+    </option>
+  </component>
+</project>

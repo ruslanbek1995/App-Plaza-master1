@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLICATION</title>
+</head>
+<style>
+    /*style.css*/
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 80%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #4caf50;
+        color: #fff;
+    }
+
+</style>
+<body>
+<div class="container"
+th:object="${user}">
+    <h2>Applications</h2>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>APPLICATION NAME</td>
+            <td>VERSION</td>
+            <td>DESCRIPTION</td>
+            <td>APP STATUS</td>
+            <td>GENRE NAME</td>applications
+            <td>CREATE DATE</td>
+            <td>DOWNLOAD</td>
+        </tr>
+        <tr th:each="app:${apps}">
+            <td th:text="${app.id}"></td>
+            <td th:text="${app.name}"/>
+            <td th:text="${app.version}"/>
+            <td th:text="${app.appStatus}"/>
+            <td th:text="${app.genreNAme}"/>
+            <td>
+                <a th:href="@{/user/update/{id}(id=${user.id})}">
+                    <button type="button" style="background-color: aqua">update</button>
+                </a>
+            </td>
+            <td>
+
+                <form th:method="post" th:action="@{/download/{userId}/{appId}(userId=${user.id},appId=${app.id})}">
+                    <input type="submit" name="download" style="background-color: #14a20a">
+                </form>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <button><a th:href="@{/users/find-all}">CREATE APPLICATION</a></button>
+
+</div>

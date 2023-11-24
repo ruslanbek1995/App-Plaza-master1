@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<body>
+<table style="width:100%">
+
+    <td>
+    <td>id</td>
+    <td>NAME</td>
+    <td>AGE</td>
+    <td>GMAIL</td>
+    <td>PASSWORD</td>
+    <td style="background-color: aqua">UPDATE</td>
+    <td style="background-color: darkblue">UPDATE</td>
+    <tr th:each="user:${userList}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${user.gmail}"></td>
+        <td th:text="${user.password}"></td>
+        <td>
+            <a th:href="@{/user/update/{id}(id=${user.getId()})}">
+                <button type="button" style="background-color: darkblue ">update</button>
+            </a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

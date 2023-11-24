@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLICATIONS</title>
+</head>
+<style>
+    /* style.css */
+    body {
+        background:url("https://img3.akspic.ru/crops/5/4/4/1/5/151445/151445-zemlya-temnota-astronomiya-vselennaya-kosmos-3840x2160.jpg") ;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 80%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #4caf50;
+        color: #fff;
+    }
+
+</style>
+<body>
+<div class="container">
+    <h2>MAILING LIST</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>SUBJECT</th>
+            <th>TEXT</th>
+            <th>CREATE DATE</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Здесь будет генерироваться список данных -->
+        <tr th:each="mailing:${MailSender}">
+            <td th:text="${mailing.id}"></td>
+            <td th:text="${mailing.name}"/>
+            <td th:text="${mailing.sender}"/>
+            <td th:text="${mailing.createDate}"/>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/mailing0">Creat mailing</a>
+
+</div>
+</body>
+</html>

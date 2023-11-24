@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<style>
+    body {
+        background: #011010;
+    }
+
+    .btn-group {
+        margin-top: 400px;
+        margin-left: 650px;
+    }
+</style>
+
+<body>
+<div class="btn-group">
+    <a href="/application/find-all">
+        <button  type="button" class="btn btn-outline-secondary">Application</button>
+    </a>
+    <a href="/genre/find-all">
+        <button type="button" class="btn btn-outline-secondary">Genres</button>
+    </a>
+    <a  href="/users/find-all">
+        <button type="button" class="btn btn-outline-secondary">user</button>
+    </a>
+    </a>
+    <a href="/mailSender/find-all">
+        <button type="button" class="btn btn-outline-secondary">MailSender</button>
+
+        </button>
+    </a>
+    <td><form th:object="${user22}"
+              th:method="post"
+              th:action="@{/users/profile/{Id}(Id=${user22.id})}">
+    </form>
+    </td>
+</div>
+
+</body>
+</html>
